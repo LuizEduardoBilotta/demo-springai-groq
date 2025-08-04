@@ -7,4 +7,8 @@ public class ChatOutput {
     public ChatOutput(String response) {
         this.response = response;
     }
+
+    public String getResponse() {
+        return response;
+    }
 }
