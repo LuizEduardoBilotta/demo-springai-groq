@@ -28,9 +28,6 @@ public class ChatClientProperties {
     @NotNull(message = "O campo temperature não pode ser nulo")
     private Double temperature;
 
-    @Value("classpath:/schema/chatOutput.json")
-    private Resource resource;
-
     public String getBaseUrl() { return baseUrl; }
 
     public void setBaseUrl(String baseUrl) { this.baseUrl = baseUrl; }
@@ -50,8 +47,4 @@ public class ChatClientProperties {
     public Double getTemperature() { return temperature; }
 
     public void setTemperature(Double temperature) { this.temperature = temperature; }
-
-    public Resource getResource() { return resource; }
-
-    public void setResource(Resource resource) { this.resource = resource; }
 }
