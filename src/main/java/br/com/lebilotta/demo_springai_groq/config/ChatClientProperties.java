@@ -1,31 +1,30 @@
 package br.com.lebilotta.demo_springai_groq.config;
 
-import org.springframework.beans.factory.annotation.Value;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.io.Resource;
 import org.springframework.validation.annotation.Validated;
-
-import javax.validation.constraints.NotNull;
 
 @Validated
 @Configuration
 @ConfigurationProperties(prefix = "chat")
 public class ChatClientProperties {
 
-    @NotNull(message = "O campo base-url não pode ser nulo")
+    @NotEmpty(message = "O campo base-url deve ser informado")
     private String baseUrl;
 
-    @NotNull(message = "O campo api-key não pode ser nulo")
+    @NotEmpty(message = "O campo api-key deve ser informado")
     private String apiKey;
 
-    @NotNull(message = "O campo model não pode ser nulo")
+    @NotEmpty(message = "O campo model deve ser informado")
     private String model;
 
-    @NotNull(message = "O campo max-tokens não pode ser nulo")
+    @NotNull(message = "O campo max-tokens deve ser informado")
     private Integer maxTokens;
 
-    @NotNull(message = "O campo temperature não pode ser nulo")
+    @NotNull(message = "O campo temperature deve ser informado")
     private Double temperature;
 
     public String getBaseUrl() { return baseUrl; }
