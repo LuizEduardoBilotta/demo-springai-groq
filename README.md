@@ -52,7 +52,7 @@ $ cd demo-springai-groq
 $ mvn clean install
 ```
 
-3. _Configure a API Key do Groq como variável de ambiente:_
+3. _Configure a API Key do Groq como variável de ambiente utilizando uma das opções abaixo:_
 
 Linux / macOS:
 ```sh
