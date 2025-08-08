@@ -1,13 +1,15 @@
-<h2 align="center">Spring AI e Groq </h2>
+<h1 align="center">
+    <img src="https://i.imgur.com/lYLd4V2.png" alt="Home page Costs"/>
+</h1>
+<h2 align="center">Spring AI e Groq: Guia Completo para Criar um Assistente Inteligente</h2>
 <p> 
-  O <strong>Costs</strong> é uma plataforma para gerenciamento de custos de projetos de tecnologia (POC) desenvolvida durante o curso para aprendizado de <strong>React</strong> do <strong>@Matheus Battisti<strong>.
+  Implementação completa de um assistente com Spring AI e Groq, configuração de Beans, uso de PromptTemplate e integração com LLMs de alta performance. Projeto de estudo e compartilhamento de conhecimento através do Blog Tech - Luiz Eduardo Bilotta.
 </p>
 
 ## :dart: Índice
 
 - [Status](##status)
 - [Tecnologias](#tecnologias)
-- [Pré-Requisitos](#pre-requisitos)
 - [Executando o projeto](#executando-o-projeto)
 - [Licença](#licença)
 
