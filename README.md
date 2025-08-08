@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img src="https://i.imgur.com/lYLd4V2.png" alt="Home page Costs"/>
+    <img src="https://i.imgur.com/SDlSy0P.png" alt="Home page Costs"/>
 </h1>
 <h2 align="center">Spring AI e Groq: Guia Completo para Criar um Assistente Inteligente</h2>
 <p> 
@@ -8,7 +8,7 @@
 
 ## :dart: Índice
 
-- [Status](##status)
+- [Status](#status)
 - [Tecnologias](#tecnologias)
 - [Executando o projeto](#executando-o-projeto)
 - [Licença](#licença)
@@ -16,10 +16,16 @@
 ## :game_die: Status
 
 <p align="center">
-  <img src="https://img.shields.io/github/repo-size/LuizEduardoBilotta/demo-springai-groq?style=for-the-badge" alt="Repository size">
-  <img src="https://img.shields.io/github/license/LuizEduardoBilotta/demo-springai-groq?style=for-the-badge" alt="License">
-  <img src="https://img.shields.io/github/languages/count/LuizEduardoBilotta/demo-springai-groq?style=for-the-badge&color=eb152a" alt="Counter Languages">
-  <img src="https://img.shields.io/github/last-commit/LuizEduardoBilotta/demo-springai-groq?style=for-the-badge&color=f50cbb" alt="Last commit">
+
+ <a href="https://github.com/LuizEduardoBilotta/demo-springai-groq">
+    <img src="https://img.shields.io/badge/Repo-demo--springai--groq-2b82c9?style=for-the-badge&logo=github" alt="Repo">
+  </a>
+  <img src="https://img.shields.io/badge/License-MIT-brightgreen?style=for-the-badge&logo=github" alt="License">
+  <img src="https://img.shields.io/badge/Language-Java-007396?style=for-the-badge&logo=openjdk" alt="Language">
+  <img src="https://img.shields.io/badge/Java-21-orange?style=for-the-badge&logo=java" alt="Java">
+  <img src="https://img.shields.io/badge/Spring-3.4.7-6DB33F?style=for-the-badge&logo=spring" alt="Spring">
+  <img src="https://img.shields.io/badge/Maven-3.9.10-007396?style=for-the-badge&logo=apachemaven" alt="Maven">
+  <img src="https://img.shields.io/badge/Status-Study-blue?style=for-the-badge" alt="Status">
 </p>
 
 ## :toolbox: Tecnologias
@@ -47,28 +53,43 @@ $ mvn clean install
 ```
 
 3. _Configure a API Key do Groq como variável de ambiente:_
-```sh
-# Se estiver utilizando o Intellij, acesse Edit Configurations.
 
-# Em Environments Variables defina uma variável com o nome GROQ_API_KEY e em valor insira a API Key gerada no site do Groq.
+Linux / macOS:
+```sh
+export GROQ_API_KEY="sua_groq_api_key_aqui"
 ```
+
+PowerShell (Windows):
+```ps1
+$env:GROQ_API_KEY = "sua_groq_api_key_aqui"
+```
+
+Persistente no Windows (cmd / global):
+```cmd
+setx GROQ_API_KEY "sua_groq_api_key_aqui"
+```
+
+No Intellij IDEA:
+```Run > Edit Configurations...``` → em Environment variables adicione GROQ_API_KEY=seu_valor
 
 4. _Execute a aplicação:_
 
 ```sh
+# Usando plugin do Spring Boot:
 $ mvn spring-boot:run
+
+# ou executando o artefato empacotado (após `mvn package`):
+$ java -jar target/*.jar
 ```
 Pronto! sua aplicação estará rodando em: `localhost:3000`
 
 5. _Realizando requisição no endpoint do assistente:
 ```curl
-curl --location 'localhost:3000/demo--springai-groq/chat/generate' \
---header 'Content-Type: application/json' \
---data '{
-    "message": "Sua pergunta"
-}'
+curl -X POST "http://localhost:3000/demo-springai-groq/chat/generate" \
+  -H "Content-Type: application/json" \
+  -d '{"message":"Sua pergunta"}'
 ```
-Substitua "Sua pergunta" pelo texto no qual quer enviar para o chat
+Substitua "Sua pergunta" pelo texto no qual quer enviar para o assistente.
 
 ## :bookmark_tabs: Licença
 
