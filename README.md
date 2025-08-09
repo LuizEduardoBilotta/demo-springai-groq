@@ -3,7 +3,10 @@
 </h1>
 <h2 align="center">Spring AI e Groq: Guia Completo para Criar um Assistente Inteligente</h2>
 <p> 
-  Implementação completa de um assistente com Spring AI e Groq, configuração de Beans, uso de PromptTemplate e integração com LLMs de alta performance. Projeto de estudo e compartilhamento de conhecimento através do Blog Tech - Luiz Eduardo Bilotta.
+  Implementação completa de um assistente com Spring AI e Groq, configuração de Beans, uso de PromptTemplate e integração com LLMs de alta performance. Projeto de estudo e compartilhamento de conhecimento através do <strong>Blog Tech - Luiz Eduardo Bilotta</strong>.</br>
+  <a href = "https://luizeduardobilotta.com.br/post/java/spring-ai-e-groq-guia-completo-para-criar-um-assistente--inteligente/">
+      Acesse o artigo clicando aqui
+  </a>
 </p>
 
 ## :dart: Índice
@@ -83,13 +86,14 @@ $ java -jar target/*.jar
 ```
 Pronto! sua aplicação estará rodando em: `localhost:3000`
 
-5. _Realizando requisição no endpoint do assistente:
+5. _Realizando requisição no endpoint do assistente:_
 ```curl
 curl -X POST "http://localhost:3000/demo-springai-groq/chat/generate" \
   -H "Content-Type: application/json" \
   -d '{"message":"Sua pergunta"}'
 ```
-Substitua "Sua pergunta" pelo texto no qual quer enviar para o assistente.
+Substitua "Sua pergunta" pelo texto no qual quer enviar para o assistente.  
+Execute o curl em seu terminal ou importe em uma ferramenta como Postman, Insomnia por exemplo.
 
 ## :bookmark_tabs: Licença
 
